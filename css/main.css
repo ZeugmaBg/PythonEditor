@@ -1,0 +1,284 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+#js-active_editor {
+  width: 100%;
+  height: calc(100vh - 75px);
+  z-index: 900;
+}
+
+#masthead {
+  background-color: #3758ce;
+  height: 75px;
+  padding: 0 20px;
+  position: relative;
+}
+
+#masthead img {
+  border: none;
+  outline: none;
+}
+
+.mb_logo {
+  position: absolute;
+  top: 1.2rem;
+}
+
+.python_logo {
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px;
+  height: 55px;
+  position: absolute;
+  top: 0.25rem;
+  right: 1rem;
+}
+
+.import_warning_container {
+  height: -webkit-fill-available;
+  background-color: #f0f0f0;
+}
+
+#import_warning {
+  font-family: Helvetica, Arial, sans-serif;
+  width: 28em;
+  margin: auto auto auto auto;
+  text-align: center;
+}
+
+#import_warning h1 {
+  font-weight: 400;
+}
+
+#import_warning .message {
+  background-color: #ffcc30;
+  border-radius: .5em;
+  padding: 1em;
+}
+
+#import_warning > img {
+  padding: 1em;
+}
+
+#import_warning .buttons {
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  justify-content: space-evenly;
+}
+
+.roundsymbol {
+    width: 4rem;
+    height: 4rem;
+    border: 6px solid #febf2e;
+    border-radius: 50%;
+    margin: .2rem;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 2.6rem;
+    line-height: 4.1rem;
+    padding: .1em;
+    font-family: "Segoe UI Emoji", "Segoe UI Symbol", "Symbola", sans-serif;
+    color: #3758ce;
+    background: #FFFFFF;
+}
+
+.roundlabel {
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+    font-size: 80%;
+    text-align: center;
+    color: #3758ce;
+}
+
+#import_help {
+    font-family: Helvetica, Arial, sans-serif;
+    width: 28em;
+    text-align: center;
+    top: 5rem;
+    position: absolute;
+    left: auto;
+    right: auto;
+    background: white;
+    padding: 1em;
+    border: .5em #3758ce solid;
+    border-radius: 1rem;
+    display: none;
+}
+
+.warning-container{
+    width: 80%;
+    padding-top: 50px;
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+  position: relative;
+}
+
+#notif{
+  display:none;
+  position: absolute;
+  z-index: 101;
+  top: 0;
+  /* the default width of borderLeftBottom and borderRightBottom is dependent on this */
+  left: 50%;
+  margin-left: -300px;
+  /* the default width of borderLeftBottom and borderRightBottom is dependent on this */
+  width: 620px;
+  background-color: #f2f2f2;
+  overflow: hidden;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border-right: 2px solid #febf2e;
+  border-left: 2px solid #febf2e;
+  border-bottom: 2px solid #febf2e;
+}
+
+.closebtn{
+  margin-right: 5px;
+  margin-left: 5px;
+  color: #3758ce;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover{
+  color:#febf2e;
+}
+
+#textnotif p{
+  font-family: "Segoe UI Light", "Segoe UI", "Segoe WP Light", "Segoe WP", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+  font-size:15px;
+  vertical-align: middle;
+  text-align: center;
+  padding: 1px;
+  margin: 9px;
+}
+
+.hidden{
+  display: none;
+}
+
+.banner-msg{
+  display: none;
+  background-color: #f2f2f2;
+  text-align: center;
+  font-size: 14px;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  font-family: "Segoe UI Light", "Segoe UI", "Segoe WP Light", "Segoe WP", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+}
+
+.banner-msg p{
+  width: 85%;
+  margin: 0 auto;
+  position: relative;
+  margin-block-start: 0.7em;
+  margin-block-end: 0.7em;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.banner-msg #banner-msg-close{
+  color:#336699;
+  position: relative;
+  width: 37px;
+  top: 5px;
+  right: 5px;
+  font-size: 30px;
+  float:right;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#borderLeftBottom{
+  display: none;
+  background-color: rgb(242, 242, 242);
+  position: absolute;
+  bottom: 0;
+  border-bottom: 2px solid #febf2e;
+  left: 0;
+  /* This number is dependent on #notif having a width of 1000px and being 55% from the left*/
+  width: calc(50% - 498px);
+}
+
+#borderRightBottom{
+  display: none;
+  background-color: rgb(242, 242, 242);
+  position: absolute;
+  bottom: 0;
+  border-bottom: 2px solid #febf2e;
+  right: 0;
+  /* This number is dependent on #notif having a width of 1000px and being 55% from the left*/
+  width: calc(50% - 502px);
+}
+
+@media only screen and (max-width: 1180px){
+  #textnotif p{
+    margin:7px;
+  }
+  #notif{
+    left: 225px;
+    right: 95px;
+    width: auto;
+    margin-left: 0px;
+  }
+  #borderLeftBottom{
+    width: 227px;
+  }
+  #borderRightBottom{
+    width: 97px;
+  }
+}
+
+@media only screen and (max-width: 1290px){
+  #textnotif p{
+    font-size:14px;
+  }
+}
+
+@media only screen and (max-width: 900px){
+  #notif{
+    visibility: hidden;
+  }
+  .banner-msg{
+    display: block;
+  }
+  #borderLeftBottom{
+    width: 50%;
+    border-bottom: 1px solid #696969;
+  }
+  #borderRightBottom{
+    width: 50%;
+    border-bottom: 1px solid #696969;
+  }
+}
+
+#info-icon{
+  overflow: visible;
+  width: 1em;
+  font-size: .9em;
+  display: inline-block;
+  height: 1em;
+  vertical-align: -0.125em;
+  padding-right: 6px;
+}
+
+#js-editor_root{
+  width: 100%;
+}
+
+.iframeOverlay {
+  position: absolute;
+  z-index: 901;
+  width:100%;
+  height:100%;
+}
